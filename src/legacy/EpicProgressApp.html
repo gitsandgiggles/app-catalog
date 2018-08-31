@@ -567,7 +567,7 @@
             { key  : 'iterations',
                 type : 'iterations',
                 fetch: 'Name,StartDate,EndDate',
-                query: '( ( EndDate > "' + releaseStart + '" ) AND ( StartDate < "' + releaseEnd + '") )',
+                // query: '( ( EndDate > "' + releaseStart + '" ) AND ( StartDate < "' + releaseEnd + '") )', //LL commented out as not using releases. V2 should make release filter optional
                 order: 'EndDate'
             };
 
@@ -577,7 +577,7 @@
                 fetch: 'FormattedID,Name,ObjectID,Iteration,StartDate,EndDate,' +
                         'PlanEstimate,TaskEstimateTotal,TaskRemainingTotal,' +
                         'ScheduleState,Blocked,Parent',
-                query: '( Release.Name contains "' + encodedName + '" )',
+                // query: '( Release.Name contains "' + encodedName + '" )',    //LL commented out as not using releases. V2 should make release filter optional
                 order: 'Rank'
             };
 
